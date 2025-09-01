@@ -8,7 +8,7 @@ const RESULT_FILE = path.join(__dirname, 'result.txt');
 
 const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/calculate') {
-    // Read inputs.txt
+
     fs.readFile(INPUT_FILE, 'utf8', (err, data) => {
       if (err) {
         res.statusCode = 500;
